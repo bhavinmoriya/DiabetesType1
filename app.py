@@ -18,7 +18,7 @@ DEFAULT_GLUCOSE_STD = 20
 def load_cgm_data(file_path: str = None) -> pl.DataFrame:
     if file_path:
         try:
-            return pl.read_csv(file_path, parse_dates=True)
+            return pl.read_csv(file_path, try_parse_dates=True)
         except Exception as e:
             st.error(f"Error loading CGM data: {e}")
             raise
@@ -33,7 +33,7 @@ def load_cgm_data(file_path: str = None) -> pl.DataFrame:
 def load_insulin_data(file_path: str = None) -> pl.DataFrame:
     if file_path:
         try:
-            return pl.read_csv(file_path, parse_dates=True)
+            return pl.read_csv(file_path, try_parse_dates=True)
         except Exception as e:
             st.error(f"Error loading insulin data: {e}")
             raise
