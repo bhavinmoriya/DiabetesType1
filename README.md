@@ -25,7 +25,7 @@ A Python tool for simulating, analyzing, and visualizing Continuous Glucose Moni
 ### **Install Dependencies**
 
 ```bash
-uv pip install polars numpy matplotlib
+uv add polars numpy matplotlib
 ```
 
 ---
