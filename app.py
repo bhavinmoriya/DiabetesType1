@@ -4,6 +4,8 @@ import numpy as np
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
+st.set_page_config(page_title="Prediction of the glucose", layout="wide")
+
 #Constants
 
 HYPO_THRESHOLD = 70
