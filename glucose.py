@@ -23,7 +23,7 @@ def load_cgm_data(file_path: Optional[str] = None) -> pl.DataFrame:
     """
     if file_path:
         try:
-            return pl.read_csv(file_path, parse_dates=True)
+            return pl.read_csv(file_path, try_parse_dates=True)
         except Exception as e:
             print(f"Error loading CGM data: {e}")
             raise
@@ -47,7 +47,7 @@ def load_insulin_data(file_path: Optional[str] = None) -> pl.DataFrame:
     """
     if file_path:
         try:
-            return pl.read_csv(file_path, parse_dates=True)
+            return pl.read_csv(file_path, try_parse_dates=True)
         except Exception as e:
             print(f"Error loading insulin data: {e}")
             raise
