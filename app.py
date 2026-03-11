@@ -73,8 +73,8 @@ insulin_file = st.file_uploader("Upload Insulin Data (CSV)", type="csv")
 
 if st.button("Run Prediction"):
     with st.spinner("Processing data..."):
-        cgm = load_cgm_data(cgm_file.name if cgm_file else None)
-        insulin = load_insulin_data(insulin_file.name if insulin_file else None)
+        cgm = load_cgm_data(cgm_file if cgm_file else None)
+        insulin = load_insulin_data(insulin_file if insulin_file else None)
         merged = merge_data(cgm, insulin)
         merged = generate_alerts(merged)
         next_glucose = predict_next_glucose(merged)
