@@ -107,6 +107,19 @@ Glucose and Insulin Dashboard
 
 ---
 
+## Running with Docker
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -t diabetes-app .
+   ```
+2. **Run the container:**
+	```bash
+	docker run -p 8501:8501 diabetes-app
+	``` 
+	
+---
+
 ## **License**
 
 This project is open-source and available under the [MIT License](LICENSE).
