@@ -94,3 +94,9 @@ if st.button("Run Prediction"):
     ax.legend()
     st.pyplot(fig)
 
+# Link to download demo files
+st.markdown("""
+---
+**Download demo files for Glucose and Insulin data:**
+[Demo Files (GitHub)](https://github.com/bhavinmoriya/DiabetesType1/tree/main/DemoFiles)
+""")
