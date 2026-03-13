@@ -34,13 +34,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: yourdockerhubusername/diabetes-app:latest
+          tags: bhavinmoriya/diabetes-app:latest
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=yourdockerhubusername/diabetes-app:cache
-          cache-to: type=registry,ref=yourdockerhubusername/diabetes-app:cache,mode=max
+          cache-from: type=registry,ref=bhavinmoriya/diabetes-app:cache
+          cache-to: type=registry,ref=bhavinmoriya/diabetes-app:cache,mode=max
 
       # 6. Optional: Run container smoke test (lightweight)
       - name: Test built image
         run: |
-          docker run --rm -p 8501:8501 yourdockerhubusername/diabetes-app:latest sleep 3
+          docker run --rm -p 8501:8501 bhavinmoriya/diabetes-app:latest sleep 3
           echo "Image built and can run!"
