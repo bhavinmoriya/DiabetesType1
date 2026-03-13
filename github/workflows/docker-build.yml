@@ -1,0 +1,21 @@
+
+#### 4. **Optional: GitHub Actions for Docker**
+If you want to automate Docker builds, you can add a GitHub Actions workflow. This is optional but recommended for CI/CD.
+
+**Example `.github/workflows/docker-build.yml`:**
+```yaml
+name: Docker Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t diabetes-app .
